@@ -21,14 +21,25 @@ class Header extends Component {
         );
       default:
         return (
-          <ul className="right hide-on-med-and-down">
-            <li className="active">
-              <a href="/surveys">Dashboard</a>
-            </li>
-            <li>
-              <a href="/api/logout">Logout</a>
-            </li>
-          </ul>
+          <div>
+            {" "}
+            <a
+              href="#"
+              data-target="slide-out"
+              className="button-collapse
+              show-on-large right sidenav-trigger"
+            >
+              <i className="material-icons">menu</i>
+            </a>
+            <ul className="right hide-on-med-and-down">
+              <li className="active">
+                <a href="/surveys">Dashboard</a>
+              </li>
+              <li>
+                <a href="/api/logout">Logout</a>
+              </li>
+            </ul>
+          </div>
         );
     }
   }
@@ -44,14 +55,6 @@ class Header extends Component {
             >
               React-Email
             </Link>
-            <a
-              href="#"
-              data-target="slide-out"
-              className="button-collapse
-              show-on-large right sidenav-trigger"
-            >
-              <i className="material-icons">menu</i>
-            </a>
             {this.renderContent()}
           </div>
         </div>

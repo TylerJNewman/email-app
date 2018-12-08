@@ -55,17 +55,14 @@ class Sidebar extends Component {
               </Link>
             </li>
             <li>
-              <a href="#!">Second Link</a>
-            </li>
-            <li>
               <div className="divider" />
             </li>
             <li>
-              <a className="subheader">Subheader</a>
+              <a className="subheader">Account Controls</a>
             </li>
             <li>
-              <a className="waves-effect" href="#!">
-                Third Link With Waves
+              <a className="waves-effect" href="/api/logout">
+                Logout
               </a>
             </li>
           </ul>
