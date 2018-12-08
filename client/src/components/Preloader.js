@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import M from "materialize-css";
-import $ from "jquery";
 import "./Preloader.css";
 
 class Preloader extends Component {
