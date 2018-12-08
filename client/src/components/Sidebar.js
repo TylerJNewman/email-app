@@ -11,6 +11,13 @@ class Sidebar extends Component {
     M.Sidenav.init(sidenav_elem);
   }
 
+  clearSidenav(e) {
+    e.preventDefault();
+    let sidenav_elem = document.querySelector(".sidenav");
+    let ins = window.M.Sidenav.getInstance(sidenav_elem);
+    ins.close();
+  }
+
   componentDidUpdate() {
     this.initalizeSidebar(); // refactor to cache
   }
@@ -33,17 +40,19 @@ class Sidebar extends Component {
                   <img className="circle" src="img/person1.jpg" />
                 </a>
                 <a href="#name">
-                  <span className="white-text name">John Doe</span>
+                  <span className="white-text name">Tyler Newman</span>
                 </a>
                 <a href="#email">
-                  <span className="white-text email">jdandturk@gmail.com</span>
+                  <span className="white-text email">
+                    tylerjnewman18@gmail.com
+                  </span>
                 </a>
               </div>
             </li>
             <li>
-              <a href="#!">
-                <i className="material-icons">cloud</i>First Link With Icon
-              </a>
+              <Link to={"/surveys"} onClick={this.clearSidenav}>
+                <i className="material-icons">dashboard</i>Dashboard
+              </Link>
             </li>
             <li>
               <a href="#!">Second Link</a>
