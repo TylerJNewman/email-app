@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../actions";
+import "./App.css";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Preloader from "./Preloader";
@@ -22,7 +23,7 @@ class App extends Component {
             <Header />
             <Sidebar />
             <Preloader />
-            <div class="container">
+            <div className="container">
               <Route exact path="/" component={Landing} />
               <Route exact path="/surveys" component={Dashboard} />
               <Route exact path="/surveys/new" component={SurveyNew} />

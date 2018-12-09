@@ -1,13 +1,24 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import M from "materialize-css";
 import "./Preloader.css";
 
 class Preloader extends Component {
   componentDidMount() {}
 
   initalizePreloader() {
-    let preloader_elem = document.querySelector(".loader");
+    let preloader_elem = document.querySelector(".loader-container");
+
+    let s = preloader_elem.style;
+    let body_elem = document.querySelector("body");
+    let body_style = body_elem.style;
+    body_style.opacity = 1;
+    function fade() {
+      s.opacity = 0;
+    }
+    setTimeout(fade, 350);
+    setTimeout(() => {
+      s.display = "none";
+    }, 2000);
   }
 
   componentDidUpdate() {
@@ -22,16 +33,18 @@ class Preloader extends Component {
         return;
       default:
         return (
-          <div className="loader preloader-wrapper big active">
-            <div className="spinner-layer spinner-blue-only">
-              <div className="circle-clipper left">
-                <div className="circle" />
-              </div>
-              <div className="gap-patch">
-                <div className="circle" />
-              </div>
-              <div className="circle-clipper right">
-                <div className="circle" />
+          <div className="loader-container">
+            <div className="loader preloader-wrapper big active">
+              <div className="spinner-layer spinner-blue-only">
+                <div className="circle-clipper left">
+                  <div className="circle" />
+                </div>
+                <div className="gap-patch">
+                  <div className="circle" />
+                </div>
+                <div className="circle-clipper right">
+                  <div className="circle" />
+                </div>
               </div>
             </div>
           </div>
