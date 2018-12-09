@@ -18,5 +18,5 @@
   z-index: 9999;
   background-color: #1976D2;
   opacity: 1;
-  transition: opacity 900ms ease 350ms;
+  transition: opacity 900ms linear 0ms;
 }
