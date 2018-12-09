@@ -27,7 +27,7 @@ class Sidebar extends Component {
       case null:
         return;
       case false:
-        return <ul classNameName="" />;
+        return <ul className="" />;
       default:
         return (
           <ul id="slide-out" className="sidenav">

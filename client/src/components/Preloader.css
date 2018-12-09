@@ -1,7 +1,11 @@
 .loader {
-    position: absolute;
-    top: 50%;
-    left: 47%;
+  position: absolute;
+  top: 50%;
+  left: 47%;
+}
+
+.spinner-layer {
+  border-color: white;
 }
 
 .loader-container {
@@ -12,7 +16,7 @@
   right: 0;
   overflow: hidden;
   z-index: 9999;
-  background-color: white;
+  background-color: #2d99da;
   opacity: 1;
-  transition: opacity 600ms ease 350ms;
+  transition: opacity 900ms ease 350ms;
 }

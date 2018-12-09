@@ -7,22 +7,28 @@ class Preloader extends Component {
 
   initalizePreloader() {
     let preloader_elem = document.querySelector(".loader-container");
+    if (preloader_elem) {
+      let style = preloader_elem.style;
+      const fade = () => {
+        style.opacity = 0;
+      };
+      setTimeout(fade, 350);
+      const cssDisplayNone = () => {
+        style.display = "none";
+      };
+      setTimeout(cssDisplayNone, 2000);
+    }
+  }
 
-    let s = preloader_elem.style;
+  initializeBody() {
     let body_elem = document.querySelector("body");
     let body_style = body_elem.style;
     body_style.opacity = 1;
-    function fade() {
-      s.opacity = 0;
-    }
-    setTimeout(fade, 350);
-    setTimeout(() => {
-      s.display = "none";
-    }, 2000);
   }
 
   componentDidUpdate() {
-    this.initalizePreloader(); // refactor to cache
+    this.initalizePreloader();
+    this.initializeBody(); // refactor to cache
   }
 
   renderContent() {
@@ -35,7 +41,7 @@ class Preloader extends Component {
         return (
           <div className="loader-container">
             <div className="loader preloader-wrapper big active">
-              <div className="spinner-layer spinner-blue-only">
+              <div className="spinner-layer">
                 <div className="circle-clipper left">
                   <div className="circle" />
                 </div>
