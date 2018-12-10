@@ -46,14 +46,14 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className="blue darken-2">
+      <nav className="navbar white" id="navbar-container">
         <div className="container">
           <div className="nav-wrapper">
             <Link
               to={this.props.auth ? "/surveys" : "/"}
               className="left brand-logo"
             >
-              React-Email
+              Stock-Go
             </Link>
             {this.renderContent()}
           </div>

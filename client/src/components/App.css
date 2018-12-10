@@ -1,3 +1,25 @@
 body {
     opacity: 0;
 }
+
+nav.navbar a {
+    color: #14cbff;
+    position: relative;
+    transition: color .2s;
+}
+
+#navbar-container.active {
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+#navbar-container {
+  box-shadow: none;
+}
+
+nav .brand-logo {
+  color: #14cbff;
+}
+
+.blue.darken-2 {
+    background-color: #14cbff !important;
+}

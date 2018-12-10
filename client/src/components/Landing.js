@@ -12,7 +12,7 @@ const Landing = () => {
               <div className="step-2">Without the risk.</div>
             </h1>
             <h4 className="summary step-3">
-              S-Play lets you invest in the stock market with play money.
+              Stock-Go lets you invest in the stock market with play money.
             </h4>
             <a
               className="waves-effect waves-light btn blue darken-2"
@@ -26,7 +26,7 @@ const Landing = () => {
           <div className="copy">
             <div className="card">
               <div className="card-image">
-                <img src="img/ocean.jpg" />
+                <img src="img/temp_phone.jpg" />
               </div>
             </div>
           </div>
